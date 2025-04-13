@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COVID Detection</title>
+    <style>
+        body { font-family: Arial; padding: 2em; }
+        img { max-width: 400px; margin: 10px 0; display: block; }
+        h2 { margin-top: 1.5em; }
+    </style>
+</head>
+<body>
+    <h1>COVID-19 X-ray Detection</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Result: {{ prediction }} (Confidence: {{ confidence }})</h2>
+        <img src="{{ image_path }}" alt="Uploaded Image">
+    {% endif %}
+
+    <h2>Visualizations</h2>
+    <img src="{{ heatmap_url }}" alt="Confusion Matrix">
+    <img src="{{ accuracy_loss_url }}" alt="Accuracy & Loss Metrics">
+    <img src="{{ precision_recall_url }}" alt="Precision & Recall Metrics">
+
+    <h2>Classification Report</h2>
+    <pre>{{ report_text }}</pre>
+</body>
+</html>
