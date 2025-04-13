@@ -13,8 +13,8 @@ This project uses a Convolutional Neural Network (CNN) to detect COVID-19 from g
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/covid-xray-detection.git
-cd covid-xray-detection
+git clone https://github.com/AdamPar/covid-19-classification-cnn.git
+cd covid-19-classification-cnn
 ```
 
 ### 2. Create and Activate a Virtual Environment
