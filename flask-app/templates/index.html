@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>COVID Detection</title>
-    <style>
-        body { font-family: Arial; padding: 2em; }
-        img { max-width: 400px; margin: 10px 0; display: block; }
-        h2 { margin-top: 1.5em; }
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>COVID Detection</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
 <body>
     <h1>COVID-19 X-ray Detection</h1>
 
@@ -22,7 +18,7 @@
         <img src="{{ image_path }}" alt="Uploaded Image">
     {% endif %}
 
-    <h2>Visualizations</h2>
+    <h2>Visualization of used model metrics</h2>
     <img src="{{ heatmap_url }}" alt="Confusion Matrix">
     <img src="{{ accuracy_loss_url }}" alt="Accuracy & Loss Metrics">
     <img src="{{ precision_recall_url }}" alt="Precision & Recall Metrics">
