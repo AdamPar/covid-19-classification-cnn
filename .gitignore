@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 COVID-19_Radiography_Dataset/
 .vscode
+results/models/
+flask-app/static/uploads

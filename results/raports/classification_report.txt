@@ -1,0 +1,8 @@
+              precision    recall  f1-score   support
+
+      Normal       0.95      0.94      0.95      2039
+       COVID       0.84      0.87      0.86       723
+
+    accuracy                           0.93      2762
+   macro avg       0.90      0.91      0.90      2762
+weighted avg       0.93      0.93      0.93      2762
