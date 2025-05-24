@@ -81,7 +81,7 @@ model.compile(optimizer='adam',
 model.summary()
 
 # --------- Step 4: Train Model ---------
-history = model.fit(X_train, y_train, epochs=2, validation_data=(X_test, y_test), batch_size=32)
+history = model.fit(X_train, y_train, epochs=10, validation_data=(X_test, y_test), batch_size=32)
 model.save(os.path.join(project_dir, "results", "models", "covid_cnn_model.h5"))
 
 # --------- Step 5: Evaluation ---------
